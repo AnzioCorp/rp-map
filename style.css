@@ -38,18 +38,14 @@ button {
     cursor: pointer;
 }
 
-/* Стиль для альбомной ориентации на мобильных устройствах */
-@media screen and (orientation: landscape) {
-    body {
-        transform: rotate(90deg);
-        transform-origin: left top;
-        width: 100vh;
-        height: 100vw;
-        overflow: scroll;
-    }
-
-    #popup {
-        transform: rotate(-90deg);
-        transform-origin: left top;
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #video-player {
+        height: 100%;
+        width: auto;
     }
 }
