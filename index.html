@@ -1,64 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Видеоплеер, фоновый звук и всплывающее сообщение</title>
-	<style>
-		/* Popup container */
-		.popup {
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			background-color: #f1f1f1;
-			padding: 20px;
-			border: 1px solid #d3d3d3;
-		}
-
-		/* The actual popup */
-		.popup .content {
-			display: block;
-			color: black;
-			font-size: 14px;
-			line-height: 1.5;
-			margin-bottom: 10px;
-		}
-
-		/* The OK button */
-		.popup .ok-button {
-			display: block;
-			background-color: #4CAF50;
-			color: white;
-			padding: 10px;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-			font-size: 14px;
-			line-height: 1.5;
-			margin-top: 10px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш заголовок страницы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<video width="320" height="240" controls autoplay>
-		<source src="video.mp4" type="video/mp4">
-		<source src="video.ogg" type="video/ogg">
-		Your browser does not support the video tag.
-	</video>
-	<audio autoplay loop>
-		<source src="audio.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
-	<div class="popup">
-		<div class="content">
-			<h2>Добро пожаловать на наш сайт!</h2>
-			<p>Мы рады приветствовать вас на нашем сайте. Здесь вы найдете полезную информацию о нашей компании и наших продуктах. Не стесняйтесь обращаться к нам за помощью, если у вас есть какие-либо вопросы или замечания.</p>
-			<p>Чтобы начать пользоваться нашим сайтом, просто нажмите кнопку OK ниже.</p>
-		</div>
-		<button class="ok-button" onclick="closePopup()">OK</button>
-	</div>
-	<script>
-		function closePopup() {
-			document.querySelector('.popup').style.display = 'none';
-		}
-	</script>
+    <!-- Видеоплеер и фоновый звук -->
+    <video id="video-player" width="100%" height="100%" controls loop>
+        <source src="background.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео тег.
+    </video>
+    <audio id="background-audio" src="ambience.mp3" loop></audio>
+
+    <!-- Popup сообщение -->
+    <div id="popup">
+        <div id="popup-content">
+            <p>Внимание: Нажатие кнопки "OK" начнет воспроизведение видео и фонового звука.</p>
+            <button onclick="startVideo()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
