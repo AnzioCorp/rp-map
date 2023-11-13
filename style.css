@@ -1,39 +1,39 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
 
 #video-player {
     object-fit: cover; /* Заполнение видеоплеера по размеру контейнера */
+    transform: rotate(90deg); /* Поворот видеоплеера на 90 градусов */
 }
 
 #popup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
+@@ -27,6 +28,7 @@ body {
     text-align: center;
     max-width: 400px; /* Максимальная ширина сообщения */
     width: 100%;
+    transform: rotate(90deg); /* Поворот сообщения на 90 градусов */
 }
 
 button {
-    padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+@@ -38,14 +40,15 @@ button {
     cursor: pointer;
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+@media (max-width: 767px) {
+    /* Применение стилей для устройств с шириной экрана до 767 пикселей (например, телефоны) */
+    #video-player {
+        height: 100%;
+        width: auto;
+        transform: rotate(0deg); /* Вернуть видеоплеер в вертикальное положение */
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #popup-content {
+        transform: rotate(0deg); /* Вернуть сообщение в вертикальное положение */
+    }
 }
