@@ -37,3 +37,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Стиль для альбомной ориентации на мобильных устройствах */
+@media screen and (orientation: landscape) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow: scroll;
+    }
+
+    #popup {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+    }
+}
