@@ -1,13 +1,19 @@
-// Функция для начала воспроизведения видео и фонового звука
+// Function to start video playback and background sound
 function startVideo() {
-    document.getElementById('popup').style.display = 'none'; // Закрытие popup сообщения
-    document.getElementById('video-player').play(); // Запуск видео
-    document.getElementById('background-audio').play(); // Запуск фонового звука
+    // Hide the popup message
+    document.getElementById('popup').style.display = 'none';
+
+    // Start playing the video
+    document.getElementById('video-player').play();
+
+    // Start playing the background sound
+    document.getElementById('background-audio').play();
 }
 
-var isRotated = false; // Track the current state of rotation
+// Track the current state of rotation
+var isRotated = false;
 
-// Функция для изменения стилей
+// Function to change styles
 function changeStyles() {
     var bodyStyle = document.body.style;
 
