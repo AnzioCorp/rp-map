@@ -12,7 +12,6 @@ body {
     position: relative; /* Ensure the button is on top of the video */
 }
 
-
 @media (orientation: portrait) {
     /* Styles for phones only */
     #style-button {
