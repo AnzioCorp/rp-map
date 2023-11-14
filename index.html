@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RP map</title>
+    <title>RP Map</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Видеоплеер и фоновый звук -->
+    <!-- Video player and background sound -->
     <video id="video-player" width="100%" height="100%" controlsList="nodownload" loop>
-        <source src="background.mp4" type="video/mp4"> Ваш браузер не поддерживает видео тег.
+        <source src="background.mp4" type="video/mp4"> Your browser does not support the video tag.
     </video>
     <audio id="background-audio" src="ambience.mp3" loop></audio>
 
-    <!-- Popup сообщение -->
+    <!-- Popup message -->
     <div id="popup">
         <div id="popup-content">
-            <p>Внимание: Нажатие кнопки "OK" начнет воспроизведение видео и фонового звука.</p>
+            <p>Attention: Clicking "OK" will start playing the video and background sound.</p>
             <button onclick="startVideo()">OK</button>
         </div>
     </div>
 
-    <!-- New button for style changes -->
+    <!-- Button for style changes -->
     <button id="style-button" onclick="changeStyles()">Change Styles</button>
 
     <script src="script.js"></script>
